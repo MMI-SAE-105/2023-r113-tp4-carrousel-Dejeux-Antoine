@@ -11,17 +11,29 @@
 
 
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+
         * {
             box-sizing: border-box;
             background-color: rgb(225, 224, 224);
         }
 
         img {
-            box-shadow: black 0 0 10px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10%;
-            border: black 3px solid
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
         .carrousel_parent-ecrans {
@@ -44,29 +56,35 @@
 
         .carrousel {
             position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 0 0 20px 0;
         }
 
         .carrousel_btn {
             position: absolute;
-            top: calc(100vw / 16 * 9 / 2 + 1rem);
+            top: 50%;
             transform: translateY(-50%);
-            width: 2rem;
-            height: 2rem;
-            background: rgba(0, 0, 0, 0.942);
-            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
             border: none;
-            display: grid;
-            place-content: center;
-            color: #ffffff;
             cursor: pointer;
+            padding: 10px;
+            font-size: 1.5rem;
+            z-index: 1;
+            transition: background-color 0.3s ease-in-out;
+            border-radius: 50%;
         }
 
         .carrousel_btn-avant {
-            left: 0;
+            left: 20px;
         }
 
         .carrousel_btn-apres {
-            right: 0;
+            right: 20px;
         }
 
 
@@ -165,5 +183,8 @@
         </ul>
     </div>
 </body>
+
+
+
 
 </html>
